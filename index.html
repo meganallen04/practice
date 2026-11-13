@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Serenity Admin — Client Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">🌿 Serenity<span>Admin</span></div>
+    <nav>
+      <a href="#" class="active">Dashboard</a>
+      <a href="#">Clients</a>
+      <a href="#">Appointments</a>
+      <a href="#">Services</a>
+      <a href="#">Reports</a>
+      <a href="#">Settings</a>
+    </nav>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1>Client Dashboard</h1>
+        <p class="subtitle">Manage your wellness centers and beauty practices</p>
+      </div>
+      <button class="btn-primary" id="addBtn">+ Add Client</button>
+    </header>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="card">
+      <div class="card-header">
+        <h2>Clients</h2>
+        <div class="filters">
+          <input type="search" id="search" placeholder="Search clients…">
+          <select id="typeFilter">
+            <option value="all">All types</option>
+            <option value="Wellness Center">Wellness Center</option>
+            <option value="Esthetician">Esthetician</option>
+            <option value="Med Spa">Med Spa</option>
+            <option value="Massage Studio">Massage Studio</option>
+          </select>
+        </div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th>Practice</th>
+            <th>Type</th>
+            <th>Location</th>
+            <th>Clients</th>
+            <th>Monthly Revenue</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="clientRows"></tbody>
+      </table>
+      <p class="empty" id="empty" hidden>No clients match your search.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
